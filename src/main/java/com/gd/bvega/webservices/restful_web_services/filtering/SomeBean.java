@@ -1,13 +1,15 @@
 package com.gd.bvega.webservices.restful_web_services.filtering;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties({"field1", "field2"})
+//@JsonIgnoreProperties({"field1", "field2"}) // -> Static Filtering
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
     private String field1;
 
-//    @JsonIgnore
+//    @JsonIgnore // -> Static Filtering
     private String field2;
 
     private String field3;
