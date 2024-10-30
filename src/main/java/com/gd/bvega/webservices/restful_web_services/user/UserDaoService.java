@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
 
 @Component
@@ -37,4 +38,7 @@ public class UserDaoService {
         return user;
     }
 
+    public void deleteUserById(Integer userId) {
+        users.removeIf(user -> user.getId().equals(userId));
+    }
 }
