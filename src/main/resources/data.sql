@@ -1,8 +1,8 @@
 insert into user_details (id, birth_date, name)
-values (10001, current_date(), 'Brian');
+values (1001, current_date(), 'Brian');
 
 insert into user_details (id, birth_date, name)
-values (10002, current_date(), 'Oscar');
+values (1002, current_date(), 'Oscar');
 
 insert into user_details (id, birth_date, name)
-values (10003, current_date(), 'Osvaldo');
+values (1003, current_date(), 'Osvaldo');
