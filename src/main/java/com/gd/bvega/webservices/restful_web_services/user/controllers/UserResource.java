@@ -1,5 +1,7 @@
-package com.gd.bvega.webservices.restful_web_services.user;
+package com.gd.bvega.webservices.restful_web_services.user.controllers;
 
+import com.gd.bvega.webservices.restful_web_services.user.User;
+import com.gd.bvega.webservices.restful_web_services.user.UserDaoService;
 import jakarta.validation.Valid;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
