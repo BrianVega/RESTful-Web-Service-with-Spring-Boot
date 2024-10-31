@@ -1,7 +1,6 @@
 package com.gd.bvega.webservices.restful_web_services.user.controllers;
 
-import com.gd.bvega.webservices.restful_web_services.user.User;
-import com.gd.bvega.webservices.restful_web_services.user.UserDaoService;
+import com.gd.bvega.webservices.restful_web_services.user.entities.User;
 import com.gd.bvega.webservices.restful_web_services.user.UserNotFoundException;
 import com.gd.bvega.webservices.restful_web_services.user.repositories.UserRepository;
 import jakarta.validation.Valid;

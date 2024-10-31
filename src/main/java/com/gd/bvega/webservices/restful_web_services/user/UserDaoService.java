@@ -1,5 +1,6 @@
 package com.gd.bvega.webservices.restful_web_services.user;
 
+import com.gd.bvega.webservices.restful_web_services.user.entities.User;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
