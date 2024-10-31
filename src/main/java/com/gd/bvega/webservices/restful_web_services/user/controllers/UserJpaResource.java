@@ -1,5 +1,6 @@
 package com.gd.bvega.webservices.restful_web_services.user.controllers;
 
+import com.gd.bvega.webservices.restful_web_services.user.entities.Post;
 import com.gd.bvega.webservices.restful_web_services.user.entities.User;
 import com.gd.bvega.webservices.restful_web_services.user.UserNotFoundException;
 import com.gd.bvega.webservices.restful_web_services.user.repositories.UserRepository;
@@ -28,9 +29,6 @@ public class UserJpaResource {
         return userRepository.findAll();
     }
 
-
-
-
     @GetMapping(path = "/jpa/users/{userId}")
     public EntityModel<User> getUsers(@PathVariable Integer userId) {
         Optional<User> user = userRepository.findById(userId);
@@ -46,11 +44,19 @@ public class UserJpaResource {
         return entityModel;
     }
 
-
-
     @DeleteMapping(path = "/jpa/users/{userId}")
     public void deleteUser(@PathVariable Integer userId) {
         userRepository.deleteById(userId);
+    }
+
+    @GetMapping(path = "/jpa/users/{userId}/posts")
+    public List<Post> getPostForUser(@PathVariable Integer userId) {
+        Optional<User> user = userRepository.findById(userId);
+
+        if(user.isEmpty())
+            throw new UserNotFoundException("User with id " + userId + " not found");
+
+        return user.get().getPosts();
     }
 
     @PostMapping(path = "/jpa/users")

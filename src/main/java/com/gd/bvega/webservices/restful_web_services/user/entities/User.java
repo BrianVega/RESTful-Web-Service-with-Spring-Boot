@@ -37,6 +37,11 @@ public class User {
         this.birthDate = birthDate;
     }
 
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+
     public User() {
     }
 
